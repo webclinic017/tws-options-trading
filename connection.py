@@ -1,5 +1,6 @@
 from ibapi.client import EClient
 from ibapi.wrapper import EWrapper
+import threading
 
 
 class TradingApp(
@@ -11,4 +12,8 @@ class TradingApp(
 
 app = TradingApp()
 app.connect("127.0.0.1", 7497, 0)
-app.run()
+
+t1 = threading.Thread(target=app.run)
+t1.start()
+
+print("After Thread")
