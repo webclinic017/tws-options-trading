@@ -8,6 +8,10 @@ class TradingApp(
 ):  # all methods available in EClient and EWrapper will be available inside TradingApp class
     def __init__(self):
         EClient.__init__(self, wrapper=self)
+        self.nextValidOrderId = None
+
+    def nextValidId(self, orderId):
+        self.nextValidOrderId = orderId
 
 
 app = TradingApp()
@@ -16,4 +20,11 @@ app.connect("127.0.0.1", 7497, 0)
 t1 = threading.Thread(target=app.run)
 t1.start()
 
-print("After Thread")
+
+# Waiting for TWS connection acknowledgement
+while app.nextValidId == None:
+    print("Waiting for TWS connection acknowledgement...")
+
+
+print("Connection established.")
+print(app.nextValidId)
