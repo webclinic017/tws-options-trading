@@ -1,4 +1,4 @@
-# Automated Options Trading Bot
+# TWS Options Trading
 
 Automated Options Trading with TWS API
 
