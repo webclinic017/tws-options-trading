@@ -17,7 +17,7 @@ class TradingApp(
 app = TradingApp()
 app.connect("127.0.0.1", 7497, 0)
 
-t1 = threading.Thread(target=app.run)
+t1 = threading.Thread(target=app.run)  # run app in an independent thread
 t1.start()
 
 
@@ -27,4 +27,3 @@ while app.nextValidId == None:
 
 
 print("Connection established.")
-print(app.nextValidId)
