@@ -16,11 +16,11 @@ def blackScholes(r, S, K, T, sigma, type="C"):
 
     Args:
         r (float): _description_
-        S (_type_): _description_
-        K (_type_): _description_
-        T (_type_): _description_
-        sigma (_type_): _description_
-        type (str, optional): _description_. Defaults to "C".
+        S (int): _description_
+        K (int): _description_
+        T (float): _description_
+        sigma (float): _description_
+        type (str): option types, either "C" for call and "P" for put. Defaults to "C".
     """
 
     d1 = (np.log(S / K) + (r + sigma**2 / 2) * T) / (sigma * np.sqrt(T))
