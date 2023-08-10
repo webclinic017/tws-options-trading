@@ -1,6 +1,6 @@
 # TWS Options Trading
 
-Automated Options Trading with TWS API
+Automated Options Trading with IBKR TWS API
 
 ## Project Setup
 
