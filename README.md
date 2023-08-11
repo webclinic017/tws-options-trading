@@ -45,4 +45,5 @@ It is preferable to install big packages (like Numpy or Pandas), or packages you
   <img width="950" alt="" src="https://github.com/eshinhw/automated-options-trading-bot/assets/41933169/3d73c925-7471-4c03-8346-bd7e38aa618a">
 </div>
 
+### Black-Scholes Formula
 
